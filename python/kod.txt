@@ -1,0 +1,33 @@
+#Ortalama HARF NOTU
+#Ort <29 FF
+#29 <= Ort <39  FD
+#39 <= Ort <45  DD
+#45 <= Ort <50  DC
+#50 <= Ort <57  CC
+#57 <= Ort <65  CB
+#65 <= Ort <75  BB
+#75 <= Ort <85  BA
+#Ort >=85 AA
+vize=int(input('Vize Notu:'))
+final=int(input('Final Notu:'))
+ort=vize*0.4+final*0.6
+if (final>=45):
+    if (ort >=85):
+      hn='AA'
+    elif (75<=ort) and  (ort<85):
+      hn='BA'
+    elif (65<=ort<75):
+      hn='BB'
+    elif (57<=ort) and  (ort<65):
+      hn='CB'
+    elif (50<=ort) and  (ort<57):
+      hn='CC'
+    elif (45<=ort) and  (ort<50):
+      hn='DC'
+    elif (39<= ort) and (ort < 45):
+      hn='DD'
+    elif (29<= ort) and (ort < 39):
+      hn='FD'
+else:
+      hn='FF'
+print(hn)
